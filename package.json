@@ -16,5 +16,8 @@
   },
   "dependencies": {
     "@prisma/client": "^4.10.1"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }
