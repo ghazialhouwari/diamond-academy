@@ -2,6 +2,11 @@ export default defineNuxtConfig({
   build: {
     transpile: ["trpc-nuxt"],
   },
+  runtimeConfig: {
+    public: {
+      storyblokAccessLevel: process.env.STORY_BLOCK_ACCESS_LEVEL,
+    },
+  },
   css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
