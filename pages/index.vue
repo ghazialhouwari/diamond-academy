@@ -1,12 +1,15 @@
 <script setup lang="ts">
 const { $client } = useNuxtApp();
+const runtimeConfig = useRuntimeConfig();
 
 const {
   data: hello,
   pending,
   error,
 } = await $client.user.hello.useQuery({ text: "client" });
-const story = await useAsyncStoryblok("home", { version: "draft" });
+const story = await useAsyncStoryblok("home", {
+  version: runtimeConfig.public.storyblokAccessLevel,
+});
 </script>
 
 <template>
