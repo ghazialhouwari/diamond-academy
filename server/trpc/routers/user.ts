@@ -1,6 +1,8 @@
 import { z } from "zod";
 import { publicProcedure, router } from "../trpc";
+import { PrismaClient, Prisma } from "@prisma/client";
 
+const prisma = new PrismaClient();
 // const UserShape = z.object({
 //   id: z.number(),
 //   name: z.string(),
@@ -11,15 +13,7 @@ import { publicProcedure, router } from "../trpc";
 // export type User = z.infer<typeof UserShape>;
 
 export const userRouter = router({
-  hello: publicProcedure
-    .input(
-      z.object({
-        text: z.string().nullish(),
-      })
-    )
-    .query(({ input }) => {
-      return {
-        greeting: `hello ${input?.text ?? "world"}`,
-      };
-    }),
+  getUsers: publicProcedure.query(async () => {
+    return await prisma.user.findMany({});
+  }),
 });
