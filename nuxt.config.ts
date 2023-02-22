@@ -16,6 +16,32 @@ export default defineNuxtConfig({
   },
   modules: [
     [
+      "@nuxtjs/i18n",
+      {
+        langDir: "locales",
+        locales: [
+          {
+            code: "en",
+            iso: "en-US",
+            file: "en.json",
+            name: "English",
+          },
+          {
+            code: "ar",
+            iso: "ar-sa",
+            files: ["ar.json"],
+            name: "Arabic",
+          },
+        ],
+        defaultLocale: "en",
+        vueI18n: {
+          legacy: false,
+          locale: "en",
+          fallbackLocale: "en",
+        },
+      },
+    ],
+    [
       "@storyblok/nuxt",
       {
         accessToken: process.env.STORY_BLOCK_ACCESS_TOKEN,
