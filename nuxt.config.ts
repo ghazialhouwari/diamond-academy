@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "nuxt-icon",
     [
       "@nuxt/image-edge",
       {

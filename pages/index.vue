@@ -28,6 +28,9 @@ const story = await useAsyncStoryblok("home", {
       </span>
     </nav>
     <div class="p-10">
+      <Icon name="uil:github" size="30" />
+    </div>
+    <div class="p-10">
       <NuxtImg
         provider="storyblok"
         format="webp"
