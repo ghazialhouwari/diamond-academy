@@ -16,6 +16,14 @@ export default defineNuxtConfig({
   },
   modules: [
     [
+      "@nuxt/image-edge",
+      {
+        storyblok: {
+          baseURL: "https://a.storyblok.com/",
+        },
+      },
+    ],
+    [
       "@nuxtjs/i18n",
       {
         langDir: "locales",

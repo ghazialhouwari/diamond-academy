@@ -60,7 +60,6 @@ const userData: Prisma.UserCreateInput[] = [
 ];
 
 async function main() {
-
   console.log(`Start clearing the tables ...`);
   await clearData();
   console.log(`Clearing the tables finished ...`);

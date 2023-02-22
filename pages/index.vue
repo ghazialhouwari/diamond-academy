@@ -28,6 +28,16 @@ const story = await useAsyncStoryblok("home", {
       </span>
     </nav>
     <div class="p-10">
+      <NuxtImg
+        provider="storyblok"
+        format="webp"
+        width="500"
+        height="145"
+        preload
+        src="/f/199737/793x230/dff1e2ed87/hero-image.png"
+      />
+    </div>
+    <div class="p-10">
       {{ $t("diamond-academy") }}
     </div>
     <StoryblokComponent v-if="story" :blok="story.content" />
