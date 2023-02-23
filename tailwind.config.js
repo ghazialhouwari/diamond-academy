@@ -11,6 +11,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ['"Roboto Condensed"', 'ui-sans-serif', 'system-ui'],
+      heading: ['"Luckiest Guy"', 'ui-sans-serif', 'system-ui'],
+    },
   },
   plugins: [],
 }

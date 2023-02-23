@@ -27,7 +27,8 @@ const story = await useAsyncStoryblok("home", {
         }}</NuxtLink>
       </span>
     </nav>
-    <div class="p-10">
+    <div class="p-10 d-flex">
+      <h1 class="text-base">Github</h1>
       <Icon name="uil:github" size="30" />
     </div>
     <div class="p-10">

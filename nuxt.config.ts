@@ -15,6 +15,15 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          "Luckiest+Guy": true,
+          "Roboto+Condensed": true,
+        },
+      },
+    ],
     "nuxt-icon",
     [
       "@nuxt/image-edge",
