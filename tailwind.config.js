@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -10,7 +12,21 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: {
+          800: '#254B86',
+          950: '#0C192D'
+        },
+        primary: colors.blue['500'],
+        secondary: colors.blue['800'],
+        dark: colors.blue['950'],
+        error: colors.red['500'],
+        info: colors.blue['500'],
+        success: colors.green['500'],
+        warning: colors.yellow['500'],
+      }
+    },
     fontFamily: {
       sans: ['"Roboto Condensed"', 'ui-sans-serif', 'system-ui'],
       heading: ['"Luckiest Guy"', 'ui-sans-serif', 'system-ui'],

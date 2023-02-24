@@ -6,4 +6,30 @@
   h1 {
     @apply font-heading;
   }
+
+  :root {
+    --da-primary-color: theme('colors.blue.500');
+    --da-secondary-color: theme('colors.blue.800');
+    --da-dark-color: theme('colors.blue.950');
+    --da-error-color: theme('colors.red.500');
+    --da-info-color: theme('colors.blue.500');
+    --da-success-color: theme('colors.green.500');
+    --da-warning-color: theme('colors.yellow.500');
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--da-primary-color);
+  }
+  .text-secondary {
+    color: var(--da-secondary-color);
+  }
+  .text-dark {
+    color: var(--da-dark-color);
+  }
+}
+
+body {
+  @apply text-gray-800 text-dark;
 }
