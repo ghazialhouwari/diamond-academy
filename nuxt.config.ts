@@ -21,6 +21,7 @@ export default defineNuxtConfig({
         families: {
           "Luckiest+Guy": true,
           "Roboto+Condensed": true,
+          "Noto+Kufi+Arabic": true,
         },
       },
     ],
@@ -65,5 +66,12 @@ export default defineNuxtConfig({
         accessToken: process.env.STORY_BLOCK_ACCESS_TOKEN,
       },
     ],
+  ],
+  components: [
+    {
+      path: "~/components/icons",
+      global: true,
+    },
+    "~/components",
   ],
 });

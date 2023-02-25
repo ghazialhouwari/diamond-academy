@@ -1,3 +1,18 @@
 {
-  "diamond-academy": "داياموند اكاديمي"
+  "diamond-academy": "داياموند اكاديمي",
+  "ar": "العربية",
+  "en": "English",
+  "home": "الرئيسية",
+  "about": "من نحن",
+  "blog": "المدونة",
+  "events": "الأحداث",
+  "help": "المساعدة",
+  "contact": "إتصل بنا",
+  "my-account": "حسابي",
+  "login": "تسجيل",
+  "register": "إنشاء",
+  "my-students": "طلابي",
+  "my-data": "بياناتي",
+  "security": "الأمان",
+  "logout": "تسجيل الخروج"
 }

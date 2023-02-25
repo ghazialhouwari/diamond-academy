@@ -1,3 +1,18 @@
 {
-  "diamond-academy": "Diamond Academy"
+  "diamond-academy": "Diamond Academy",
+  "ar": "العربية",
+  "en": "English",
+  "home": "Home",
+  "about": "About",
+  "blog": "Blog",
+  "events": "Events",
+  "help": "Help",
+  "contact": "Contact",
+  "my-account": "My Account",
+  "login": "Login",
+  "register": "Register",
+  "my-students": "My Students",
+  "my-data": "My Data",
+  "security": "Security",
+  "logout": "Logout"
 }

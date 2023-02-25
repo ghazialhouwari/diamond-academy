@@ -16,6 +16,13 @@
     --da-success-color: theme('colors.green.500');
     --da-warning-color: theme('colors.yellow.500');
   }
+  [dir=rtl] body {
+    font-family: "Noto Kufi Arabic";
+    font-size: 15px;
+  }
+  .container {
+    @apply mx-auto;
+  }
 }
 
 @layer utilities {
@@ -32,4 +39,8 @@
 
 body {
   @apply text-gray-800 text-dark;
+}
+
+.siteSeperator {
+  @apply flex w-px bg-gray-300;
 }
