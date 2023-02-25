@@ -12,15 +12,15 @@ defineEmits(["toggleSideMenu"]);
           src="/images/diamond-academy-logo.svg"
         />
       </NuxtLink>
-      <div class="hidden lg:flex items-center">
-        <NavMenu />
+      <div class="flex items-center">
+        <NavMenu class="hidden lg:flex" />
         <span
-          class="siteSeperator py-3 ltr:ml-3 rtl:ml-6 ltr:mr-6 rtl:mr-3"
+          class="w-px bg-gray-300 hidden lg:flex py-3 ltr:ml-3 rtl:ml-6 ltr:mr-6 rtl:mr-3"
         ></span>
         <LanguageSwitcher />
-        <span class="siteSeperator py-3 mx-6"></span>
-        <ProfileMenu />
-        <span class="mx-3"></span>
+        <span class="hidden sm:flex siteSeperator py-3 mx-6"></span>
+        <ProfileMenu class="hidden sm:flex" />
+        <span class="mx-3 hidden sm:flex"></span>
         <LocalIcon
           name="Menu"
           size="30"
