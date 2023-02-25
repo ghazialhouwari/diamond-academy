@@ -6,7 +6,7 @@ defineEmits(["toggleSideMenu"]);
   <div class="sideMenu">
     <div class="sideMenu__overlay" @click="$emit('toggleSideMenu')"></div>
     <div class="sideMenu__content">
-      <NuxtImg
+      <img
         class="siteMenu__logo mb-6"
         alt="Diamond Academy"
         src="/images/diamond-academy-logo.svg"
