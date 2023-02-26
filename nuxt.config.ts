@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       {
         families: {
           "Luckiest+Guy": true,
-          "Roboto+Condensed": true,
+          "Roboto+Condensed": [300, 400, 700],
           "Noto+Kufi+Arabic": true,
         },
       },

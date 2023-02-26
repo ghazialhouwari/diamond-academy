@@ -2,9 +2,9 @@
   <div class="siteHero"></div>
 </template>
 
-<style>
+<style lang="postcss">
 .siteHero {
-  background: rgb(0, 184, 255);
+  @apply bg-primary;
   height: 100vh;
   min-height: 750px;
   max-height: 1000px;

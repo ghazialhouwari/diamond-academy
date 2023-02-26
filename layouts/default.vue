@@ -8,6 +8,6 @@ const toggleSideMenu = () => {
 
 <template>
   <Header @toggleSideMenu="toggleSideMenu" />
-  <SideMenu v-if="showSideMenu" @toggleSideMenu="toggleSideMenu" />
+  <SideMenu :showSideMenu="showSideMenu" @toggleSideMenu="toggleSideMenu" />
   <slot />
 </template>

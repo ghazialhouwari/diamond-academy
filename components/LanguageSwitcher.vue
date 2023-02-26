@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { LocaleObject } from "#i18n";
-const { locales } = useI18n();
+const { locale: activeLocale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
 const availableLocales = computed(() => locales.value as LocaleObject[]);
@@ -17,7 +17,8 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
           'font-sans': locale.code === 'en',
           'font-noto': locale.code === 'ar',
         }"
-        :disabled="true"
+        :tabindex="activeLocale === locale.code ? -1 : 0"
+        :disabled="activeLocale === locale.code"
       >
         {{ $t(locale.code) }}
       </NuxtLink>
@@ -31,6 +32,6 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
 
 <style lang="postcss">
 .siteHeader__locale.router-link-active {
-  @apply text-gray-400 pointer-events-none select-none;
+  @apply text-gray-500 pointer-events-none select-none;
 }
 </style>

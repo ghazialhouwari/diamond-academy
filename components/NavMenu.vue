@@ -45,9 +45,9 @@ const menu = computed((): Menu[] => [
 
 <style lang="postcss">
 .siteHeader__navLink {
-  @apply px-3 py-4 md:py-2;
+  @apply px-3 py-4 md:py-2 whitespace-nowrap;
 }
 .siteHeader__navLink.router-link-exact-active {
-  @apply text-primary;
+  @apply text-primary font-semibold;
 }
 </style>

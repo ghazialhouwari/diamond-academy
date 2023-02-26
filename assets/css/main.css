@@ -21,7 +21,7 @@
     font-size: 15px;
   }
   .container {
-    @apply mx-auto;
+    @apply mx-auto px-4;
   }
 }
 

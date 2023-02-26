@@ -5,7 +5,12 @@ const dir = computed(() => (locale.value === "ar" ? "rtl" : "ltr"));
 
 <template>
   <NuxtLayout>
-    <Html :lang="locale" :dir="dir"></Html>
+    <Html :lang="locale" :dir="dir">
+      <Head>
+        <Title>{{ $t("diamond-academy") }}</Title>
+        <Meta name="description" :content="$t('diamond-academy-summery')" />
+      </Head>
+    </Html>
     <NuxtPage />
   </NuxtLayout>
 </template>

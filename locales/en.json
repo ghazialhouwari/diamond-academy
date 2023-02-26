@@ -16,5 +16,7 @@
   "security": "Security",
   "logout": "Logout",
   "signup": "Sign Up",
-  "academy-summery": "Diamond Academy are passionate about sports and physical activity. Our school was created out of passion for water sports and personal development."
+  "diamond-academy-summery": "Diamond Academy are passionate about sports and physical activity. Our school was created out of passion for water sports and personal development.",
+  "logo": "Logo",
+  "object": "{name} {object}"
 }
