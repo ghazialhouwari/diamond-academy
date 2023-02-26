@@ -14,9 +14,8 @@ defineEmits(["toggleSideMenu"]);
       <NuxtImg
         class="siteMenu__logo mb-6"
         :alt="$t('object', { name: $t('diamond-academy'), object: $t('logo') })"
-        src="/images/diamond-academy-logo.svg"
-        width="200"
-        height="83"
+        provider="storyblok"
+        src="/f/199737/200x83/fb97a8e9e8/diamond-academy-logo.svg"
       />
       <p>{{ $t("diamond-academy-summery") }}</p>
       <div class="h-px w-full bg-gray-300 my-8"></div>

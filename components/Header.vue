@@ -18,9 +18,8 @@ const { locale } = useI18n();
             $t('object', { name: $t('diamond-academy'), object: $t('logo') })
           "
           target="static"
-          src="/images/diamond-academy-logo.svg"
-          width="170"
-          height="70"
+          provider="storyblok"
+          src="/f/199737/200x83/fb97a8e9e8/diamond-academy-logo.svg"
         />
       </NuxtLink>
       <div class="flex items-center">
