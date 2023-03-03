@@ -8,7 +8,11 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
 
 <template>
   <div class="flex items-center">
-    <LocalIcon name="Globe" size="20" class="ltr:mr-2 rtl:ml-2" />
+    <LocalIcon
+      name="Globe"
+      size="20"
+      class="hidden sm:block ltr:mr-2 rtl:ml-2"
+    />
     <template v-for="(locale, index) in availableLocales" :key="locale.code">
       <NuxtLink
         :to="switchLocalePath(locale.code) || ''"
@@ -16,16 +20,18 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
         :class="{
           'font-sans': locale.code === 'en',
           'font-noto': locale.code === 'ar',
+          'hidden sm:block': activeLocale === locale.code,
         }"
         :tabindex="activeLocale === locale.code ? -1 : 0"
         :disabled="activeLocale === locale.code"
       >
         {{ $t(locale.code) }}
       </NuxtLink>
-      <span
+      <Separator
         v-if="index < availableLocales.length - 1"
-        class="siteSeperator py-2 mx-2"
-      ></span>
+        :sm="true"
+        class="mx-2 hidden sm:block"
+      />
     </template>
   </div>
 </template>

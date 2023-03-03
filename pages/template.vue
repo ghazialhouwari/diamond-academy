@@ -1,4 +1,7 @@
-<script setup lang="ts">
+<template>
+  <h1>Template file</h1>
+</template>
+<!-- <script setup lang="ts">
 import type { LocaleObject } from "#i18n";
 const { $client } = useNuxtApp();
 const runtimeConfig = useRuntimeConfig();
@@ -55,4 +58,4 @@ const story = await useAsyncStoryblok("home", {
       </ul>
     </template>
   </div>
-</template>
+</template> -->

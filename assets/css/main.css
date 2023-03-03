@@ -40,7 +40,3 @@
 body {
   @apply text-gray-800 text-dark;
 }
-
-.siteSeperator {
-  @apply flex w-px bg-gray-300;
-}

@@ -11,42 +11,27 @@ const { locale } = useI18n();
         :aria-label="
           $t('object', { name: $t('diamond-academy'), object: $t('logo') })
         "
+        data-test-id="header-logo"
       >
-        <NuxtImg
-          class="siteHeader__logo"
-          :alt="
-            $t('object', { name: $t('diamond-academy'), object: $t('logo') })
-          "
-          target="static"
-          provider="storyblok"
-          src="/f/199737/200x83/fb97a8e9e8/diamond-academy-logo.svg"
-        />
+        <Logo class="siteHeader__logo" />
       </NuxtLink>
       <div class="flex items-center">
         <NavMenu class="hidden lg:flex" />
-        <span
-          role="separator"
-          aria-orientation="vertical"
-          class="w-px bg-gray-300 hidden lg:flex py-3 ltr:ml-3 rtl:ml-6 ltr:mr-6 rtl:mr-3"
-        ></span>
+        <Separator
+          :md="true"
+          class="hidden lg:flex ltr:ml-3 rtl:ml-6 ltr:mr-6 rtl:mr-3"
+        />
         <LanguageSwitcher />
-        <span
-          role="separator"
-          aria-orientation="vertical"
-          class="hidden sm:flex siteSeperator py-3 mx-6"
-        ></span>
+        <Separator :md="true" class="hidden sm:flex mx-6" />
         <ProfileMenu class="hidden sm:flex" />
-        <span class="mx-3 hidden sm:flex"></span>
-        <LocalIcon
-          role="button"
-          name="Menu"
-          size="30"
-          class="cursor-pointer"
+        <div class="mx-3 flex"></div>
+        <button
           title="Open mobile navigation"
-          tabindex="0"
           @click="$emit('toggleSideMenu')"
           @keyup.space="$emit('toggleSideMenu')"
-        />
+        >
+          <LocalIcon name="Menu" size="30" />
+        </button>
       </div>
     </div>
   </nav>
