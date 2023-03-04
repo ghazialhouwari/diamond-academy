@@ -1,4 +1,5 @@
-import { describe, it, expect } from "vitest";
+// @vitest-environment nuxt
+import { describe, test, it, expect } from "vitest";
 import { shallowMount, VueWrapper, RouterLinkStub } from "@vue/test-utils";
 import Header from "./Header.vue";
 import { createI18n, type Locale } from "vue-i18n";
@@ -29,12 +30,12 @@ const setup = (locale: Locale = "en") => {
 describe("Header", async () => {
   test("logo redirects to home page", () => {
     setup();
-    expect(wrapper.find("nuxtlink").exists()).toBeTruthy();
-    expect(wrapper.find("nuxtlink").attributes().to).toBe("/");
+    expect(wrapper.find("nuxt-link-stub").exists()).toBeTruthy();
+    expect(wrapper.find("nuxt-link-stub").attributes().to).toBe("/");
   });
   test("logo redirects to home page with correct locale", () => {
     setup("ar");
-    expect(wrapper.find("nuxtlink").attributes().to).toBe("/ar");
+    expect(wrapper.find("nuxt-link-stub").attributes().to).toBe("/ar");
   });
   it("renders side menu trigger button", () => {
     setup();

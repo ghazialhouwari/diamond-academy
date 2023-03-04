@@ -22,6 +22,7 @@ const availableLocales = computed(() => locales.value as LocaleObject[]);
           'font-noto': locale.code === 'ar',
           'hidden sm:block': activeLocale === locale.code,
         }"
+        :data-label="`Switch language to ${locale.code}`"
         :tabindex="activeLocale === locale.code ? -1 : 0"
         :disabled="activeLocale === locale.code"
       >

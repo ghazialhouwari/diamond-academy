@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "nuxt-vitest",
     [
       "@nuxtjs/google-fonts",
       {
